@@ -175,6 +175,7 @@
 				TargetAttributes = {
 					34C107BF1A6F9D1A00B3EF72 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 2BU9L58HLW;
 					};
 					34C107D21A6F9D1A00B3EF72 = {
 						CreatedOnToolsVersion = 6.1;
@@ -344,6 +345,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				DEVELOPMENT_TEAM = 2BU9L58HLW;
 				INFOPLIST_FILE = CellAutoHeight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +357,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				DEVELOPMENT_TEAM = 2BU9L58HLW;
 				INFOPLIST_FILE = CellAutoHeight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +417,7 @@
 				34C107DF1A6F9D1A00B3EF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		34C107E01A6F9D1A00B3EF72 /* Build configuration list for PBXNativeTarget "CellAutoHeightTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +426,7 @@
 				34C107E21A6F9D1A00B3EF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
