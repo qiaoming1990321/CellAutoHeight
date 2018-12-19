@@ -1,0 +1,91 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+	
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    cocoapods
+    # carthage
+  end
+ 
+
+  lane :debug_log do
+    update_info_plist(
+      plist_path:"Relax/info.plist",
+      display_name:"Relax Test"
+    )
+
+    sigh(
+      Adhoc:true,
+      app_identifier: "com.meditation.relax", 
+      output_path:"./fastlane/assets"
+    )
+    
+    c_build_scheme = "Relax_debug_log"
+    c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
+    gym(
+      scheme: c_build_scheme,
+      workspace:"Relax.xcworkspace",
+      configuration:"Adhoc",
+      output_directory:"./fastlane/build/adhoc",
+      output_name:c_output_name,
+      include_bitcode:false,
+      include_symbols:true,
+      silent:true,
+      export_method:"ad-hoc"
+    )
+    pgyer(api_key: "9f9cebcb2f684d638c5b8a2a69d33963", user_key: "9d5891c05476f4c74f1b2cd3f7cf6ca8")
+  end
+
+	
+   lane :release_log do
+    uupdate_info_plist(
+      plist_path:"Relax/info.plist",
+      display_name:"Relax Test"
+    )
+
+    sigh(
+      Adhoc: true,
+      app_identifier: "com.meditation.relax", 
+      output_path:"./fastlane/assets"
+    )
+    
+    c_build_scheme = "Relax_release_log"
+    c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
+    gym(
+      scheme: c_build_scheme,
+      workspace:"Relax.xcworkspace",
+      configuration:"Adhoc",
+      output_directory:"./fastlane/build/adhoc",
+      output_name:c_output_name,
+      include_bitcode:false,
+      include_symbols:true,
+      silent:true,
+      export_method:"ad-hoc"
+    )
+    pgyer(api_key: "9f9cebcb2f684d638c5b8a2a69d33963", user_key: "9d5891c05476f4c74f1b2cd3f7cf6ca8")
+  end
+
+
+
+
+  desc "Description of what the lane does"
+  lane :custom_lane do
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+end

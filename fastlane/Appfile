@@ -1,0 +1,7 @@
+app_identifier "com.meditation.relax" # The bundle identifier of your app
+apple_id "13922787420@163.com" # Your Apple email address
+
+team_id "C4PMQY2NWN" # Developer Portal Team ID
+
+# you can even provide different app identifiers, Apple IDs and team names per lane:
+# More information: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Appfile.md
