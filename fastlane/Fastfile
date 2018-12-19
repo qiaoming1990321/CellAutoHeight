@@ -35,7 +35,7 @@ platform :ios do
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
       scheme: c_build_scheme,
-      workspace:"CellAutoHeight.xcworkspace",
+      #workspace:"CellAutoHeight.xcworkspace",
       configuration:"Debug",
       output_directory:"./fastlane/build/adhoc",
       output_name:c_output_name,
@@ -58,7 +58,7 @@ platform :ios do
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
       scheme: c_build_scheme,
-      workspace:"CellAutoHeight.xcworkspace",
+      #workspace:"CellAutoHeight.xcworkspace",
       configuration:"Debug",
       output_directory:"./fastlane/build/adhoc",
       output_name:c_output_name,
