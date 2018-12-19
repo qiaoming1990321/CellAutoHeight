@@ -26,13 +26,13 @@ platform :ios do
 
   lane :debug_log do
     update_info_plist(
-      plist_path:"Relax/info.plist",
-      display_name:"Relax Test"
+      plist_path:"CellAutoHeight/info.plist",
+      display_name:"CellAutoHeight Test"
     )
 
     sigh(
       Adhoc:true,
-      app_identifier: "com.meditation.relax", 
+      app_identifier: "com.lanou3g.www.CellAutoHeight", 
       output_path:"./fastlane/assets"
     )
     
@@ -54,18 +54,18 @@ platform :ios do
 
 	
    lane :release_log do
-    uupdate_info_plist(
-      plist_path:"Relax/info.plist",
-      display_name:"Relax Test"
+    update_info_plist(
+      plist_path:"CellAutoHeight/info.plist",
+      display_name:"CellAutoHeight Test"
     )
 
     sigh(
-      Adhoc: true,
-      app_identifier: "com.meditation.relax", 
+      Adhoc:true,
+      app_identifier: "com.lanou3g.www.CellAutoHeight", 
       output_path:"./fastlane/assets"
     )
     
-    c_build_scheme = "Relax_release_log"
+    c_build_scheme = "Relax_debug_log"
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
       scheme: c_build_scheme,
