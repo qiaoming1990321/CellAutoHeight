@@ -14,7 +14,7 @@ sys.setdefaultencoding('utf-8')
 
 
 # 从蒲公英获取 App 信息
-pgyer_r = requests.post(url='http://www.pgyer.com/apiv2/app/view', data={'appKey':'df3c3fb59455532193d9bbd94a43bd8c','_api_key':'a6bf4db6f46321d1b8bcc00846637110'})
+pgyer_r = requests.post(url='http://www.pgyer.com/apiv2/app/view', data={'appKey':'4b8a7e4d6c5c1bf9648a502c2cd108aa','_api_key':'9f9cebcb2f684d638c5b8a2a69d33963'})
 pgyer_res = json.loads(pgyer_r.text)
 print(pgyer_res)
 pgyer_data = pgyer_res["data"]
@@ -51,7 +51,7 @@ for item in jenkins_change_set_items:
 print changelogs
 
 # 更新蒲公英上传的  git记录
-pgyer_r1 = requests.post(url='https://www.pgyer.com/apiv2/app/updateApp', data={'_api_key':'df3c3fb59455532193d9bbd94a43bd8c','userKey': 'a6bf4db6f46321d1b8bcc00846637110','buildUpdateDescription':changelogs,'buildKey':pgyer_data["buildKey"]})
+pgyer_r1 = requests.post(url='https://www.pgyer.com/apiv2/app/updateApp', data={'_api_key':'9f9cebcb2f684d638c5b8a2a69d33963','userKey': '9d5891c05476f4c74f1b2cd3f7cf6ca8','buildUpdateDescription':changelogs,'buildKey':pgyer_data["buildKey"]})
 
 # 钉钉通知
 dd_headers = {'Content-type':'application/json'}
