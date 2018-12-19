@@ -16,7 +16,6 @@ sys.setdefaultencoding('utf-8')
 # 从蒲公英获取 App 信息
 pgyer_r = requests.post(url='http://www.pgyer.com/apiv2/app/view', data={'appKey':'4b8a7e4d6c5c1bf9648a502c2cd108aa','_api_key':'9f9cebcb2f684d638c5b8a2a69d33963'})
 pgyer_res = json.loads(pgyer_r.text)
-print(pgyer_res)
 pgyer_data = pgyer_res["data"]
 
 # var = os.popen("echo $CHANGES").read()
@@ -36,9 +35,12 @@ def auth_headers(username, password):
 
 jenkins_build_url = os.environ["BUILD_URL"]
 jenkins_api = jenkins_build_url + "api/json/"
+print(jenkins_api)
 #jenkins_api = "http://localhost:8080/jenkins/job/its_test/10/api/json/"
 jenkins_headers = {"Authorization": auth_headers("admin", "admin")}
+print(jenkins_headers)
 jenkins_r = requests.get(url=jenkins_api, headers=jenkins_headers)
+print(jenkins_r)
 jenkins_res = json.loads(jenkins_r.text)
 #jenkins_res = simplejson.loads(jenkins_r.text)
 print(jenkins_res)
