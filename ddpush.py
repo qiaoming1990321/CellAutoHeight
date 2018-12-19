@@ -37,7 +37,7 @@ jenkins_build_url = os.environ["BUILD_URL"]
 jenkins_api = jenkins_build_url + "api/json/"
 print(jenkins_api)
 #jenkins_api = "http://localhost:8080/jenkins/job/its_test/10/api/json/"
-jenkins_headers = {"Authorization": auth_headers("admin", "admin")}
+jenkins_headers = {"Authorization": auth_headers("qiaoming", "111111")}
 print(jenkins_headers)
 jenkins_r = requests.get(url=jenkins_api, headers=jenkins_headers)
 print(jenkins_r)
