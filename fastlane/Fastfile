@@ -30,11 +30,6 @@ platform :ios do
       display_name:"CellAutoHeight Test"
     )
 
-    sigh(
-      Debug:true,
-      app_identifier: "com.lanou3g.www.CellAutoHeight", 
-      output_path:"./fastlane/assets"
-    )
     
     c_build_scheme = "Relax_debug_log"
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
@@ -59,12 +54,6 @@ platform :ios do
       display_name:"CellAutoHeight Test"
     )
 
-    sigh(
-      Debug:true,
-      app_identifier: "com.lanou3g.www.CellAutoHeight", 
-      output_path:"./fastlane/assets"
-    )
-    
     c_build_scheme = "Relax_debug_log"
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
