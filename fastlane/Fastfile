@@ -31,7 +31,7 @@ platform :ios do
     )
 
     sigh(
-      Adhoc:false,
+      Debug:true,
       app_identifier: "com.lanou3g.www.CellAutoHeight", 
       output_path:"./fastlane/assets"
     )
@@ -60,7 +60,7 @@ platform :ios do
     )
 
     sigh(
-      Adhoc:true,
+      Debug:true,
       app_identifier: "com.lanou3g.www.CellAutoHeight", 
       output_path:"./fastlane/assets"
     )
