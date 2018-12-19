@@ -16,6 +16,7 @@ sys.setdefaultencoding('utf-8')
 # 从蒲公英获取 App 信息
 pgyer_r = requests.post(url='http://www.pgyer.com/apiv2/app/view', data={'appKey':'df3c3fb59455532193d9bbd94a43bd8c','_api_key':'a6bf4db6f46321d1b8bcc00846637110'})
 pgyer_res = json.loads(pgyer_r.text)
+print(pgyer_res)
 pgyer_data = pgyer_res["data"]
 
 # var = os.popen("echo $CHANGES").read()
