@@ -31,7 +31,7 @@ platform :ios do
     )
 
     sigh(
-      Adhoc:true,
+      Adhoc:false,
       app_identifier: "com.lanou3g.www.CellAutoHeight", 
       output_path:"./fastlane/assets"
     )
@@ -40,14 +40,14 @@ platform :ios do
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
       scheme: c_build_scheme,
-      workspace:"Relax.xcworkspace",
-      configuration:"Adhoc",
+      workspace:"CellAutoHeight.xcworkspace",
+      configuration:"Debug",
       output_directory:"./fastlane/build/adhoc",
       output_name:c_output_name,
       include_bitcode:false,
       include_symbols:true,
       silent:true,
-      export_method:"ad-hoc"
+      export_method:"development"
     )
     pgyer(api_key: "9f9cebcb2f684d638c5b8a2a69d33963", user_key: "9d5891c05476f4c74f1b2cd3f7cf6ca8")
   end
@@ -69,14 +69,14 @@ platform :ios do
     c_output_name = "#{c_build_scheme}-#{Time.now.strftime("%Y-%m-%d %H:%M:%S")}"
     gym(
       scheme: c_build_scheme,
-      workspace:"Relax.xcworkspace",
-      configuration:"Adhoc",
+      workspace:"CellAutoHeight.xcworkspace",
+      configuration:"Debug",
       output_directory:"./fastlane/build/adhoc",
       output_name:c_output_name,
       include_bitcode:false,
       include_symbols:true,
       silent:true,
-      export_method:"ad-hoc"
+      export_method:"development"
     )
     pgyer(api_key: "9f9cebcb2f684d638c5b8a2a69d33963", user_key: "9d5891c05476f4c74f1b2cd3f7cf6ca8")
   end
